@@ -43,7 +43,7 @@ class Chat:
         return await self.client(EditChatTitleRequest(chat_id, title))
 
     async def add_admin_user(self, chat: hints.EntityLike, user: hints.EntityLike) -> types.Updates:
-        return await self.client.edit_admin(chat, user, is_admin=True, add_admins=True, pin_messages=True, invite_users=True, add_admins=True)
+        return await self.client.edit_admin(chat, user, is_admin=True, add_admins=True, pin_messages=True, invite_users=True)
 
     async def delete_admin_user(self, chat: hints.EntityLike, user: hints.EntityLike) -> types.Updates:
         return await self.client.edit_admin(chat, user, is_admin=False)
